@@ -11,4 +11,5 @@ public class LoginPageTest extends BaseTest {
                 configuration.ReadProperties.username(),
                 configuration.ReadProperties.password());
     }
+
 }
