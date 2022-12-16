@@ -6,10 +6,13 @@ import org.testng.annotations.Test;
 
 public class LoginPageTest extends BaseTest {
     @Test
-    public void login()  {
+    public void login() throws InterruptedException {
         loginStep.login(
                 configuration.ReadProperties.username(),
                 configuration.ReadProperties.password());
+        startAtlasianStep.openProjectsPage();
+        projectStep.createProjectButtonClick();
+        Thread.sleep(2000);
     }
 
 }

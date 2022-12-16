@@ -6,7 +6,7 @@ import pages.LoginPage;
 
 import java.time.Duration;
 
-public class BasePage {
+public  abstract class BasePage {
 
     protected WebDriver driver;
     protected WaitService waitService;
