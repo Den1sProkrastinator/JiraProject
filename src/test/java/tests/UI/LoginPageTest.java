@@ -11,7 +11,7 @@ public class LoginPageTest extends BaseTest {
                 configuration.ReadProperties.username(),
                 configuration.ReadProperties.password());
         startAtlasianStep.openProjectsPage();
-        projectStep.createProjectButtonClick();
+        projectStep.choseProject("TestScrumProject");
         Thread.sleep(2000);
     }
 
