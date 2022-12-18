@@ -5,10 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pages.BoardPage;
-import steps.BoardStep;
-import steps.LoginStep;
-import steps.ProjectsStep;
-import steps.StartAtlasianStep;
+import pages.CreateIssuePage;
+import steps.*;
 
 public class BaseTest {
     protected WebDriver driver;
@@ -18,17 +16,21 @@ public class BaseTest {
 
     protected ProjectsStep projectStep;
     protected BoardStep boardStep;
+    protected CreateIssuesStep createIssuesStep;
+
     @BeforeMethod
     public void setup() {
 
         driver = new BrowsersService().getDriver();
         loginStep = new LoginStep(driver);
-        startAtlasianStep= new StartAtlasianStep(driver);
+        startAtlasianStep = new StartAtlasianStep(driver);
         projectStep = new ProjectsStep(driver);
-        boardStep=new BoardStep(driver);
+        boardStep = new BoardStep(driver);
+        createIssuesStep = new CreateIssuesStep(driver);
         driver.get(configuration.ReadProperties.getUrl());
 
     }
+
     @AfterMethod
     public void tearDown() {
         driver.quit();

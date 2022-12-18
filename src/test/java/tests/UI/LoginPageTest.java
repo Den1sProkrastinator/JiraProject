@@ -15,7 +15,11 @@ public class LoginPageTest extends BaseTest {
         startAtlasianStep.openProjectsPage();
         projectStep.choseProject("TestScrumProject");
         boardStep.createButton();
+        createIssuesStep.selectBugIssues();
         Thread.sleep(2000);
+        createIssuesStep.selectStatus();
+        Thread.sleep(2000);
+
     }
 
 }

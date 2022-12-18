@@ -1,10 +1,7 @@
 package baseEntities;
 
 import org.openqa.selenium.WebDriver;
-import pages.BoardPage;
-import pages.LoginPage;
-import pages.ProjectsPage;
-import pages.StartAtlasianPage;
+import pages.*;
 
 public class BaseStep {
     protected WebDriver driver;
@@ -12,6 +9,7 @@ public class BaseStep {
     protected StartAtlasianPage startAtlasianPage;
     protected ProjectsPage projectPage;
     protected BoardPage boardPage;
+    protected CreateIssuePage createIssuePage;
 
 
     public BaseStep(WebDriver driver) {
@@ -20,6 +18,7 @@ public class BaseStep {
         startAtlasianPage = new StartAtlasianPage(driver);
         projectPage = new ProjectsPage(driver);
         boardPage = new BoardPage(driver);
+        createIssuePage = new CreateIssuePage(driver);
     }
 
 
