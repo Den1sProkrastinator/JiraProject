@@ -4,9 +4,10 @@ import core.BrowsersService;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import pages.ProjectPage;
+import pages.BoardPage;
+import steps.BoardStep;
 import steps.LoginStep;
-import steps.ProjectStep;
+import steps.ProjectsStep;
 import steps.StartAtlasianStep;
 
 public class BaseTest {
@@ -15,14 +16,16 @@ public class BaseTest {
 
     protected StartAtlasianStep startAtlasianStep;
 
-    protected ProjectStep projectStep;
+    protected ProjectsStep projectStep;
+    protected BoardStep boardStep;
     @BeforeMethod
     public void setup() {
 
         driver = new BrowsersService().getDriver();
         loginStep = new LoginStep(driver);
         startAtlasianStep= new StartAtlasianStep(driver);
-        projectStep = new ProjectStep(driver);
+        projectStep = new ProjectsStep(driver);
+        boardStep=new BoardStep(driver);
         driver.get(configuration.ReadProperties.getUrl());
 
     }

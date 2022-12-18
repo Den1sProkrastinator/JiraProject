@@ -5,12 +5,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class ProjectPage extends BasePage {
+public class ProjectsPage extends BasePage {
 
 private By createProjectLocator = By.cssSelector(".css-ryxqcb");
 private String projectLocator = "//div/span[@class and text()='Replace']";
 
-    public ProjectPage(WebDriver driver) {
+    public ProjectsPage(WebDriver driver) {
         super(driver);
     }
     public WebElement getCreateProjectLocator (){

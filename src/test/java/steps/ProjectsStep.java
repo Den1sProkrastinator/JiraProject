@@ -3,9 +3,9 @@ package steps;
 import baseEntities.BaseStep;
 import org.openqa.selenium.WebDriver;
 
-public class ProjectStep extends BaseStep {
+public class ProjectsStep extends BaseStep {
 
-    public ProjectStep(WebDriver driver) {
+    public ProjectsStep(WebDriver driver) {
         super(driver);
     }
 
