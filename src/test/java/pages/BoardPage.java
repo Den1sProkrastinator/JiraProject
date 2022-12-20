@@ -16,7 +16,7 @@ public class BoardPage extends BasePage {
     }
 
     public WebElement getCreateButtonLocator() {
-        return waitService.waitForVisibilityLocatedBy(createButtonLocator);
+        return waitService.waitForExists(createButtonLocator);
     }
 
     public WebElement getCreateButtonTargetLocator() {

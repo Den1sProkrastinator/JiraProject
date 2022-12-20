@@ -17,8 +17,8 @@ public class LoginPageTest extends BaseTest {
         boardStep.createButton();
         createIssuesStep.selectBugIssues();
         Thread.sleep(2000);
-        createIssuesStep.selectStatus();
-        Thread.sleep(2000);
+//        createIssuesStep.selectStatus();
+//        Thread.sleep(2000);
 
     }
 
