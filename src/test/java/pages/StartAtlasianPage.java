@@ -14,5 +14,5 @@ public class StartAtlasianPage extends BasePage {
         super(driver);
     }
 
-    public WebElement getJiraSoftwareButtonLocator (){return waitService.waitForExists(jiraSoftwareButtonLocator);}
+    public WebElement getJiraSoftwareButton (){return waitService.waitForExists(jiraSoftwareButtonLocator);}
 }

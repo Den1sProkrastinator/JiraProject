@@ -9,6 +9,6 @@ public class StartAtlasianStep extends BaseStep {
     }
 
     public void openProjectsPage(){
-        startAtlasianPage.getJiraSoftwareButtonLocator().click();
+        startAtlasianPage.getJiraSoftwareButton().click();
     }
 }

@@ -14,11 +14,13 @@ public class LoginPageTest extends BaseTest {
                 configuration.ReadProperties.password());
         startAtlasianStep.openProjectsPage();
         projectStep.choseProject("TestScrumProject");
+        Thread.sleep(1000);
         boardStep.createButton();
         createIssuesStep.selectBugIssues();
-        Thread.sleep(2000);
-//        createIssuesStep.selectStatus();
-//        Thread.sleep(2000);
+        createIssuesStep.selectStatus();
+        createIssuesStep.writeSummary("Test text");
+        createIssuesStep.writeDescription("Test Test");
+        createIssuesStep.createIssue();
 
     }
 

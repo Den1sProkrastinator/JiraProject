@@ -13,11 +13,11 @@ private String projectLocator = "//div/span[@class and text()='Replace']";
     public ProjectsPage(WebDriver driver) {
         super(driver);
     }
-    public WebElement getCreateProjectLocator (){
+    public WebElement getCreateProject (){
         return waitService.waitForExists(createProjectLocator);
     }
 
-    public WebElement getProjectLocator(String projectName) {
+    public WebElement getProject(String projectName) {
         return waitService.waitForExists(By.xpath(projectLocator.replace("Replace", projectName)));
     }
 }

@@ -15,11 +15,11 @@ public class BoardPage extends BasePage {
         super(driver);
     }
 
-    public WebElement getCreateButtonLocator() {
-        return waitService.waitForExists(createButtonLocator);
+    public WebElement getCreateButton() {
+        return waitService.waitForVisibilityLocatedBy(createButtonLocator);
     }
 
-    public WebElement getCreateButtonTargetLocator() {
-        return waitService.waitForExists(createButtonTargetLocator);
+    public WebElement getCreateButtonTarget() {
+        return waitService.waitForVisibilityLocatedBy(createButtonTargetLocator);
     }
 }

@@ -12,11 +12,11 @@ public class BoardStep extends BaseStep {
 
         Actions actions = new Actions(driver);
         actions
-                .moveToElement(boardPage.getCreateButtonTargetLocator(), 30, 20)
+                .moveToElement(boardPage.getCreateButtonTarget(), 30, 20)
                 .build()
                 .perform();
 
-        boardPage.getCreateButtonLocator().click();
+        boardPage.getCreateButton().click();
     }
 
     public BoardStep(WebDriver driver) {

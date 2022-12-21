@@ -10,8 +10,8 @@ public class ProjectsStep extends BaseStep {
     }
 
     public void createProjectButtonClick(){
-        projectPage.getCreateProjectLocator().click();
+        projectPage.getCreateProject().click();
     }
 
-    public void choseProject(String projectName){projectPage.getProjectLocator(projectName).click();}
+    public void choseProject(String projectName){projectPage.getProject(projectName).click();}
 }

@@ -7,35 +7,54 @@ import org.openqa.selenium.WebElement;
 
 public class CreateIssuePage extends BasePage {
 
+    //Issue Type fields
     private By selectIssueTypeLocator = By.id("issue-create.ui.modal.create-form.type-picker.issue-type-select");
-    private By issueTypeBugLocator = By.xpath("//div[@class=' css-1b6odlt'][.='Bug']");
 
-    private By selectStatusLocator = By.cssSelector(".ewxv9o42");
-    private By statusTypeInTestingLocator = By.id("issueTypeBugLocator");
+    private By issueTypeBugLocator = By.xpath("//div[@class='sc-1lie33m-3 hpUCVg'][.='Bug']");
 
-    private By summaryLocator = By.className("summary");
+    //Status Type fields
+    private By selectStatusLocator = By.xpath("//button[@aria-label='To Do - Change status']");
+    private By selectStatusTypeInTestingLocator = By.cssSelector(".sc-1mohigh-0.fPuBnb");
+
+    //Summary and Description fields
+    private By summaryLocator = By.xpath("//*[@name='summary']");
+
+    private By descriptionLocator = By.className("ua-chrome");
+
+    //Button field
+    private By createButtonTargetLocator= By.className("css-ryxqcb");
+
+
+
 
     public CreateIssuePage(WebDriver driver) {
         super(driver);
     }
 
-    public WebElement getSelectIssueTypeLocator() {
+    public WebElement getSelectIssueType() {
         return waitService.waitForExists(selectIssueTypeLocator);
     }
 
-    public WebElement getIssueTypeBugLocator() {
+    public WebElement getIssueTypeBug() {
         return waitService.waitForExists(issueTypeBugLocator);
     }
 
-    public WebElement getSelectStatusLocator() {
+    public WebElement getSelectStatus() {
         return waitService.waitForExists(selectStatusLocator);
     }
-    public WebElement getStatusTypeInTestingLocator() {
-        return waitService.waitForExists(statusTypeInTestingLocator);
+
+    public WebElement getStatusTypeInTesting() {
+        return waitService.waitForVisibilityLocatedBy(selectStatusTypeInTestingLocator);
     }
 
-    public WebElement getSummaryLocator() {
+    public WebElement getSummary() {
         return waitService.waitForExists(summaryLocator);
+    }
+    public WebElement getDescription() {
+        return waitService.waitForExists(descriptionLocator);
+    }
+    public WebElement getCreateButton() {
+        return waitService.waitForExists(createButtonTargetLocator);
     }
 
 }
