@@ -28,6 +28,7 @@ public class BaseTest {
         boardStep = new BoardStep(driver);
         createIssuesStep = new CreateIssuesStep(driver);
         driver.get(configuration.ReadProperties.getUrl());
+        loginStep.login(configuration.ReadProperties.username(), configuration.ReadProperties.password());
 
     }
 
